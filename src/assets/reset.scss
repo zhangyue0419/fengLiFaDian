@@ -1,0 +1,363 @@
+html {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+
+  body {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.el-width-auto {
+  width: 100% !important;
+}
+
+// 表单
+.el-form-reset {
+  .el-form-item {
+    // 表单项
+    margin-right: 12px !important;
+
+    // 表单label字体样式
+    .el-form-item__label {
+      color: #fff !important
+    }
+
+    .el-input__wrapper {
+      background: rgba(0, 255, 252, 0.05) !important;
+      position: relative;
+      box-shadow: none !important;
+      border-right: 1px solid rgba(78, 203, 255, 0.4);
+      border-left: 1px solid rgba(78, 203, 255, 0.4);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(297deg, rgba(78, 203, 255, 0) 0%, #00fffc 50%, rgba(134, 231, 255, 0) 100%);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(297deg, rgba(78, 203, 255, 0) 0%, #00fffc 50%, rgba(134, 231, 255, 0) 100%);
+      }
+
+      .el-input__inner {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+// 表格
+.el-table-reset {
+  background: transparent !important;
+
+  .el-table__inner-wrapper {
+    &::before {
+      display: none !important;
+    }
+
+    .el-table__header {
+      position: relative;
+      background: linear-gradient(180deg, rgba(0, 255, 252, 0.1) 0%, rgba(9, 34, 64, 0.2) 100%) !important;
+
+      thead {
+        height: 65px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(297deg, rgba(78, 203, 255, 0) 0%, #00fffc 50%, rgba(134, 231, 255, 0) 100%);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(297deg, rgba(78, 203, 255, 0) 0%, #00fffc 50%, rgba(134, 231, 255, 0) 100%);
+      }
+    }
+  }
+
+  tr {
+    background: transparent !important;
+    position: relative;
+
+    &:hover {
+
+      //   background: red !important;
+      &::after {
+        content: '';
+        width: 2px;
+        height: 100%;
+        background: #00FFFC;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      background: linear-gradient(180deg, rgba(0, 255, 252, 0.1) 0%, rgba(9, 34, 64, 0.2) 100%) !important;
+    }
+
+    th,
+    td {
+      background: transparent !important;
+      font-size: 14px;
+      font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+      text-align: center !important;
+      border-color: transparent !important;
+      font-weight: 400 !important;
+    }
+
+    th {
+      color: #fff;
+    }
+
+    td {
+      color: rgba($color: #fff, $alpha: .7);
+    }
+  }
+}
+
+// 折叠菜单
+.el-menu-vertical-reset {
+  background: transparent !important;
+  border: none !important;
+
+  .el-sub-menu {
+    .el-menu {
+      background: transparent !important;
+
+      .el-menu-item {
+        height: 36px;
+      }
+    }
+  }
+
+  .el-sub-menu__title,
+  .el-menu-item {
+    height: 36px;
+    color: #fff !important;
+    font-weight: 400;
+
+    &.is-active {
+      background: linear-gradient(90deg, #00F8F5 0%, rgba(0, 245, 242, 0) 100%) !important;
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #00F8F5 0%, rgba(0, 245, 242, 0) 100%) !important;
+    }
+
+  }
+
+}
+
+// 单选框
+.el-radio-group {
+  background: transparent !important;
+
+  .el-radio-button {
+    background: transparent !important;
+
+    border-color: rgba(0, 255, 252, 0.4);
+
+    .el-radio-button__inner {
+      background: transparent !important;
+      color: rgba($color: #fff, $alpha: .7);
+      border-color: rgba(0, 255, 252, 0.2) !important;
+    }
+  }
+
+  .is-active {
+    .el-radio-button__inner {
+      border-color: rgba(0, 255, 252, 0.6) !important;
+      box-shadow: -1px 0 0 0 rgba(0, 255, 252, 0.8) !important;
+    }
+  }
+}
+
+// 日期选择面板
+.el-picker__popper {
+  background: rgba(7, 27, 54, 0.6) !important;
+
+  .el-date-picker {
+    background: transparent !important;
+
+    .el-picker-panel__body {
+      .el-date-picker__header {
+
+
+        .el-date-picker__header-label {
+          color: #fff !important;
+        }
+
+        .el-date-picker__prev-btn,
+        .el-date-picker__next-btn {
+          button {
+            .el-icon {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+
+      .el-picker-panel__content {
+        .el-date-table {
+          tr {
+            th {
+              color: #fff !important;
+            }
+
+            .available {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .el-popper__arrow {
+    display: none !important;
+  }
+}
+
+
+// 自定义标签样式
+.tag-success {
+  font-size: 14px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+  font-weight: 400;
+  color: #40BB5A;
+  background: rgba(64, 187, 90, 0.1);
+  border-radius: 2px;
+  border: 1px solid rgba(64, 187, 90, 0.4);
+}
+
+.tag-warning {
+  font-size: 14px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+  font-weight: 400;
+  color: #FFA01E;
+  background: rgba(255, 160, 30, 0.1);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 160, 30, 0.4);
+}
+
+.tag-error {
+  font-size: 14px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+  font-weight: 400;
+  color: #FF4D4F;
+  background: rgba(255, 77, 79, 0.1);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 77, 79, 0.4);
+}
+
+// 自定义复选框
+.checkbox-box {
+  display: flex;
+
+  .checkbox-label {
+    padding-right: 6px;
+    font-size: 14px;
+  }
+
+  .checkbox-list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+
+    .checkbox-item {
+      padding: 0 12px;
+      border: 1px solid rgba(0, 255, 252, 0.2);
+      margin: 0 8px 8px 0;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      color: rgba($color: #fff, $alpha: .7);
+      position: relative;
+    }
+
+    .checkbox-active {
+      color: #fff;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      border-right: 1px solid rgba(0, 255, 252, 0.6);
+      border-left: 1px solid rgba(0, 255, 252, 0.6);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(297deg, rgba(78, 203, 255, 0) 0%, #00fffc 50%, rgba(134, 231, 255, 0) 100%);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(297deg, rgba(78, 203, 255, 0) 0%, #00fffc 50%, rgba(134, 231, 255, 0) 100%);
+      }
+    }
+  }
+}
+
+.el-dropdown__popper {
+  background: transparent !important;
+
+  .el-scrollbar {
+    .el-dropdown-menu {
+      background: rgba($color: #000D1F, $alpha: .3);
+      border: 1px solid #375D80;
+      backdrop-filter: blur(10px);
+
+      .el-dropdown-menu__item {
+        font-size: 12px;
+        font-family: Roboto-Medium, Roboto;
+        font-weight: 500;
+        color: #FFFFFF;
+
+      }
+
+      .el-dropdown-menu__item:not(.is-disabled):focus {
+        background: transparent !important;
+        color: #00FFFC;
+      }
+
+      .current {
+        color: #00FFFC;
+      }
+    }
+  }
+
+  .el-popper__arrow {
+    &::before {
+      display: none;
+      // border-color: transparent !important;
+      // background: #375D80 !important;
+      // backdrop-filter: blur(10px);
+    }
+  }
+}

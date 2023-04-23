@@ -1,0 +1,96 @@
+@use "sass:math";
+
+@function vw($px) {
+  // @return math.div($px , 1920) * 100vw;
+  @return (ceil($px / 1920 * 10000)/100)+vw;
+}
+
+@function vh($px) {
+  // @return (math.div($px , 1080) * 10000)/100+vh;
+  @return (ceil($px / 1080 * 10000)/100)+vh;
+}
+
+$color: #009786;
+
+::v-deep(.el-pagination) {
+  .el-pager {
+    .is-active {
+      background: $color !important;
+    }
+  }
+}
+
+::v-deep(.search-box) {
+  display: flex;
+
+  .input-box {
+    width: vw(300);
+    box-sizing: border-box;
+    margin-right: vw(15);
+
+    .el-input {
+      .el-input-group__prepend {
+        border: vw(1) solid $color;
+        border-right: 0px;
+        color: $color;
+      }
+
+      .el-input__wrapper {
+        border: vw(1) solid $color;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .search-btn {
+    button {
+      background: $color;
+    }
+  }
+}
+
+::v-deep(.el-table) {
+  .el-table__inner-wrapper {
+    .el-table__header-wrapper {
+      .el-table__header {
+        thead {
+          tr {
+            th {
+              .cell {
+                color: #000;
+                font-weight: 1900;
+                font-size: vw(16);
+
+                .el-table__placeholder {
+                  width: 0px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .el-table__body-wrapper {
+      .el-scrollbar {
+        .el-scrollbar__wrap {
+          .el-scrollbar__view {
+            .el-table__body {
+              tbody {
+                tr {
+                  td {
+                    .cell {
+                      .el-table__placeholder {
+                        width: 0px !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
